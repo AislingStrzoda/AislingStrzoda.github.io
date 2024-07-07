@@ -1,0 +1,142 @@
+
+
+body {
+	background-color: #EFEFEF;
+	color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  	height: 100%;
+    margin: 0;
+}
+
+
+header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1;
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 18%;
+    font-size: 18pt;
+}
+
+.parallax {
+	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background: url('test_image.JPG') no-repeat center center;*/
+    background-color: #2A708C;
+    background-size: cover;
+    z-index: 0;
+    transform: translateZ(0) scale(1);
+    transition: transform 0.1s ease-out;
+}
+
+
+
+nav {
+    background: #102030;
+    color: #325443;
+    overflow: hidden;
+    padding: .1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid black; /* Add this line to add a bottom border */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 0.1rem;
+
+}
+
+nav ul li a {
+    color: #F69268;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    transition: background 0.3s;
+    border-radius: 10px;
+
+}
+
+nav ul li a:hover {
+    background: #12452B;
+}
+
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-placeholder {
+    height: 0px; /* Set an initial height for the placeholder */
+    transition: height 0s ease;
+}
+
+
+/* Styling for the image grid */
+.image-grid {
+    padding: 0 16px;
+}
+
+/* Styling for the row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
+}
+
+/* Styling for the columns */
+.column {
+    flex: 1;
+    max-width: 50%;
+    padding: 0 8px;
+}
+
+/* Ensuring images are responsive */
+.column img {
+    width: 100%;
+    padding: 8px;
+    
+    vertical-align: middle;
+}
+
+/* For demo content */
+.content {
+    padding: 16px;
+}
+
+.spacer {
+    height: 1500px; /* Create space to scroll */
+}

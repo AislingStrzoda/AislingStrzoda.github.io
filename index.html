@@ -4,10 +4,92 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Aisling's Portfolio</title>
+
+	<!-- Poppins - Google Font Loading -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+	<!-- Linking Slick Image Carosel Library-->
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	<script src="jquery-3.7.1.min.js"></script>
+
+	<!-- Linking Page's Stylesheet -->
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<p>
-		Hello World!
-	</p>
+	<header>
+	    <div class="parallax"></div>
+	    <div class="header-content">
+	        <h1>Aisling Strzoda</h1>
+	        <p>Graphic Design Student at NCAD</p>
+	    </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#clubs">Clubs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fills Space of Navbar Once Navbar Becomes Sticky -->
+    <div class="navbar-placeholder"></div>
+
+    <div class = "image-grid">
+    	<div class = "row">
+	    	<div class = "column">
+	    		<img src="image_grid_01.png">	
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    	</div>
+	    	<div class = "column">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    	</div>
+	    	<div class = "column">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01.png">
+	    		<img src="image_grid_01	.png">
+	    	</div>
+	    </div>
+    </div>
+
+	<div class='spacer'></div>
+
+	<!-- Script for Header Parallax -->
+    <!-- Script for Sticky Navbar -->
+    <script>
+        document.addEventListener('scroll', function() {
+            var scrolled = window.pageYOffset;
+            var parallax = document.querySelector('.parallax');
+            var header = document.querySelector('.header-content');
+            if (parallax) parallax.style.transform = 'translateY(' + (scrolled * 0.25) + 'px) scale(1)';
+            if (header) header.style.transform = 'translateY(' + (scrolled * 0.15) + 'px)';
+        });
+
+		document.addEventListener('DOMContentLoaded', function() {
+		    const navbar = document.querySelector('nav');
+		    const placeholder = document.querySelector('.navbar-placeholder');
+		    const top = navbar.offsetTop;
+
+		    window.addEventListener('scroll', function() {
+		        if (window.scrollY >= top) {
+		            navbar.classList.add('sticky');
+		            
+		        } else {
+		            navbar.classList.remove('sticky');
+		            
+		        }
+		    });
+		});
+    </script>
 </body>
 </html>
