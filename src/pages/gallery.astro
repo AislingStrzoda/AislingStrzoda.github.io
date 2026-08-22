@@ -1,0 +1,17 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Gallery — Aisling Strzoda" description="Selected graphic design projects by Aisling Strzoda.">
+  <header class="page-heading">
+    <h1>Gallery</h1>
+  </header>
+
+  <section class="project-gallery" aria-label="Selected projects">
+    <ProjectCard title="Project One" detail="Project type · Year" href="/projects/project-one" shape="portrait" />
+    <ProjectCard title="Project Two" detail="Project type · Year" href="/projects/project-two" shape="landscape" />
+    <ProjectCard title="Project Three" detail="Project type · Year" href="/projects/project-three" shape="square" />
+  </section>
+</BaseLayout>
+

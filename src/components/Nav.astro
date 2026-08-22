@@ -1,0 +1,23 @@
+---
+const currentPath = Astro.url.pathname;
+const isHomePage = currentPath === "/";
+---
+
+<header class="site-header">
+  <nav class="site-nav" aria-label="Main navigation">
+    {!isHomePage && <a class="site-name" href="/">Aisling Strzoda</a>}
+
+    <ul class="nav-links">
+      <li>
+        <a href="/gallery" aria-current={currentPath.startsWith("/gallery") || currentPath.startsWith("/projects") ? "page" : undefined}>
+          Gallery
+        </a>
+      </li>
+      <li>
+        <a href="/info" aria-current={currentPath.startsWith("/info") ? "page" : undefined}>
+          Info
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

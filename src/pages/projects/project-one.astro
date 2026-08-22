@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Project One — Aisling Strzoda" description="Project One by Aisling Strzoda.">
+  <article class="project-page">
+    <header class="project-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h1>Project One</h1>
+      </div>
+      <p>
+        A short project description will go here.
+      </p>
+    </header>
+
+    <div class="project-media" aria-label="Project media placeholders">
+      <div class="media-placeholder media-placeholder--wide" aria-hidden="true"></div>
+      <div class="media-pair">
+        <div class="media-placeholder media-placeholder--portrait" aria-hidden="true"></div>
+        <div class="media-placeholder media-placeholder--portrait" aria-hidden="true"></div>
+      </div>
+      <div class="media-placeholder media-placeholder--landscape" aria-hidden="true"></div>
+    </div>
+
+    <a class="back-link" href="/gallery">← Back to gallery</a>
+  </article>
+</BaseLayout>
+

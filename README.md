@@ -1,3 +1,8 @@
-# Aisling Strzoda Portfolio
+# Aisling Strzoda — Graphic Designer
 
-A graphic design portfolio website for Aisling Strzoda.
+Aisling Strzoda's graphic design portfolio website.
+
+## Prerequisites
+
+- Node.js 22.12.0 or newer
+- npm
