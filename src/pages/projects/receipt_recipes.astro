@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const images = [
+  { src: "/images/projects/receipt_recipes/rr_hero_img.jpg", alt: "Receipt Recipes cookbook and cocktail book" },
+  ...Array.from({ length: 11 }, (_, index) => {
+    const number = index + 1;
+    const extension = number >= 7 ? "jpeg" : "jpg";
+    return {
+      src: `/images/projects/receipt_recipes/rr_gallery_img_${number}.${extension}`,
+      alt: `Receipt Recipes project photography, image ${number}`,
+    };
+  }),
+];
+---
+
+<BaseLayout title="Receipt Recipes — Aisling Strzoda" description="Receipt Recipes, a cookbook project by Aisling Strzoda.">
+  <article class="project-page">
+    <header class="project-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h1>Receipt Recipes</h1>
+      </div>
+      <div class="project-description">
+        <p>Receipt recipes is a cookbook inspired by the receipts within Peter Haining’s Ephemera archive from box 6, 2005.</p>
+        <p>Each shopping receipt reveals unlikely pairings such as mackerel and orange juice or peppers and chocolate, just to name a few. We’ve turned these strange combinations into budget-friendly recipes that students can enjoy.</p>
+        <p>This cookbook was created in collaboration with Aisling Mullaney and Conor Toomey</p>
+        <p>The layout we chose is quite minimal as we additionally placed illustrations, photography and commentary alongside it.</p>
+        <p>We chose to bind our books with a spiral spine, taking inspiration from the cookbooks from the 2000s. We chose reddish orange to tie back to our illustrations, tip boxes and orange tablecloth endpapers.</p>
+        <p>The project’s impact relied on its visuals. We took inspiration from food photography of the era the recipes came from, as well as Martin Parr’s distinct style. Shot in various locations, the photos were styled to reflect a casual, ‘on-the-go’ student lifestyle, connecting back to Peter Haining’s experience in that era.</p>
+        <p>It was shortlisted and featured in a symposium held in April at the Harry Clarke Lecture Theatre, and was later displayed to the public in the NCAD foyer that same month.</p>
+        <p>We created a complementary cocktail book to truly have a student menu. The layout remained minimal as we placed illustrations, photography, commentary and receipts alongside it. The photography remained unconventional.</p>
+      </div>
+    </header>
+
+    <div class="project-media" aria-label="Receipt Recipes project gallery">
+      {images.map((image, index) => (
+        <img class="project-media__image" src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+      ))}
+    </div>
+
+    <a class="back-link" href="/gallery">← Back to gallery</a>
+  </article>
+</BaseLayout>

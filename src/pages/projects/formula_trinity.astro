@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const images = [
+  { src: "/images/projects/full_car.jpeg", alt: "Full Formula Trinity race car livery design" },
+  { src: "/images/projects/car_number_close.jpeg", alt: "Close-up of racing car number 132 and sponsor graphics" },
+  { src: "/images/projects/hoodies.jpeg", alt: "Formula Trinity team hoodies" },
+  { src: "/images/projects/team.jpeg", alt: "Formula Trinity team" },
+];
+---
+
+<BaseLayout title="Formula Trinity — Aisling Strzoda" description="Formula Trinity race car livery and visual identity by Aisling Strzoda.">
+  <article class="project-page">
+    <header class="project-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h1>Formula Trinity</h1>
+      </div>
+      <div class="project-description">
+        <p>Formula Trinity is Trinity College Dublin’s Formula Student team, which designs and builds a race car to compete at Silverstone.</p>
+        <p>I developed the visual identity of the car through its livery, sponsor graphics and hand-painted details, as well as designing merchandise for the team. The project involved translating an existing brand into a bold visual system that worked across both the car and apparel.</p>
+      </div>
+    </header>
+
+    <div class="project-media" aria-label="Formula Trinity project gallery">
+      {images.map((image, index) => (
+        <img class="project-media__image" src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+      ))}
+    </div>
+
+    <a class="back-link" href="/gallery">← Back to gallery</a>
+  </article>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const images = [
+  { src: "/images/projects/solough/s_hero_img.jpg", alt: "Solough font and type specimen" },
+  { src: "/images/projects/solough/s_gallery_img_1.jpg", alt: "Solough type specimen, image 1" },
+  { src: "/images/projects/solough/s_gallery_img_2.jpg", alt: "Solough type specimen, image 2" },
+  { src: "/images/projects/solough/s_gallery_img_3.jpg", alt: "Solough type specimen, image 3" },
+  { src: "/images/projects/solough/s_gallery_img_4.jpg", alt: "Solough type specimen, image 4" },
+  { src: "/images/projects/solough/s_gallery_img_5.jpg", alt: "Solough type specimen, image 5" },
+  { src: "/images/projects/solough/s_gallery_img_6.jpg", alt: "Solough type specimen, image 6" },
+  { src: "/images/projects/solough/s_lowercase_img.png", alt: "Solough lowercase character set" },
+  { src: "/images/projects/solough/s_uppercase_img.png", alt: "Solough uppercase character set" },
+];
+---
+
+<BaseLayout title="Solough — Aisling Strzoda" description="Solough, a custom font and type specimen by Aisling Strzoda.">
+  <article class="project-page">
+    <header class="project-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h1>Solough</h1>
+      </div>
+      <div class="project-description">
+        <p>My font <em>Solough</em> was inspired by two things that bring me happiness: sunlight and the lakes of Cavan. While observing the lake on a sunny weekend, I noticed the refraction of light creating patterns on the lake bed.</p>
+        <p>Looking closer at these patterns I started to make out different shapes, which eventually formed letters. This was my main inspiration for this font.</p>
+        <p>After creating my font, I wanted to further capture its organic and flowy nature by complementing it with a fold-out book. As the reader unravels the book, a pop up map is revealed, camouflaged within the patterns.</p>
+        <p>This map showcases how the font could be used within poster format. It displays the lake that inspired me to create this font: Lough Ramor. I printed the type specimen in Riso Blue, tying the theme back to its watery origins.</p>
+      </div>
+    </header>
+
+    <div class="project-media" aria-label="Solough project gallery">
+      {images.map((image, index) => (
+        <img class="project-media__image" src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+      ))}
+    </div>
+
+    <a class="back-link" href="/gallery">← Back to gallery</a>
+  </article>
+</BaseLayout>

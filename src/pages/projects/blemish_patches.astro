@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const images = [
+  { src: "/images/projects/blemish_patches/bp_gallery_hero.JPG", alt: "Blemish Patches packaging featuring Irish wildflowers" },
+  { src: "/images/projects/blemish_patches/bp_gallery_img_1.JPG", alt: "Blemish Patches project, image 1" },
+  { src: "/images/projects/blemish_patches/bp_gallery_img_2.JPG", alt: "Blemish Patches project, image 2" },
+];
+---
+
+<BaseLayout title="Blemish Patches — Aisling Strzoda" description="Blemish Patches, a packaging design project by Aisling Strzoda.">
+  <article class="project-page">
+    <header class="project-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h1>Blemish Patches</h1>
+      </div>
+      <div class="project-description">
+        <p>My packaging proposal for pimple patches uses illustrations of nine Irish wildflowers to spark curiosity and reconnect young adults with native plants.</p>
+        <p>Each patch contains real flower extracts with healing properties.</p>
+        <p>The front features a vibrant golden-yellow gorse flower held up by traditional Claddagh hands.</p>
+        <p>Packaged in biodegradable brown paper and paired with a poster in English and Gaeilge, the design blends skincare with Ireland’s heritage.</p>
+        <p>The flower imagery on the patches becomes conversation starters, turning trend-driven skincare into a quiet revival of lost knowledge.</p>
+        <p>We live in a digital age estranged from nature and heritage. In Ireland, over 56% of native plant species have declined in range or abundance. Many young people can recognise countless brand logos but few can identify the wildflowers in their own area.</p>
+        <p>Worn on the skin, they transform a skincare routine into a walking field guide, prompting passers-by to ask, “What flower is that?” and inviting users to share its name, folklore, and traditional uses.</p>
+      </div>
+    </header>
+
+    <div class="project-media" aria-label="Blemish Patches project gallery">
+      {images.map((image, index) => (
+        <img class="project-media__image" src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+      ))}
+    </div>
+
+    <a class="back-link" href="/gallery">← Back to gallery</a>
+  </article>
+</BaseLayout>

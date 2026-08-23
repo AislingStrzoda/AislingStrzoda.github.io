@@ -1,11 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const titleLines = ["Aisling", "Strzoda"];
 ---
 
 <BaseLayout>
   <section class="home-intro">
     <div>
-      <h1>Aisling<br />Strzoda</h1>
+      <h1 aria-label={titleLines.join(" ")}>
+        {titleLines.map((line, lineIndex) => (
+          <>
+            <span class="title-line" aria-hidden="true">
+              {Array.from(line).map((letter) => <span class="title-letter">{letter}</span>)}
+            </span>
+            {lineIndex < titleLines.length - 1 && <br aria-hidden="true" />}
+          </>
+        ))}
+      </h1>
       <p class="home-role">Graphic Designer</p>
     </div>
     <p class="home-summary">
@@ -14,4 +25,3 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </p>
   </section>
 </BaseLayout>
-

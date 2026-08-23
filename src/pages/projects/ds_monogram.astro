@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const images = [
+  { src: "/images/projects/ds_monogram/dsm_hero_img.png", alt: "Fish and hook DS monogram" },
+  { src: "/images/projects/ds_monogram/dsm_gallery_img_1.JPG", alt: "DS Monogram aquarium ornament, image 1" },
+  { src: "/images/projects/ds_monogram/dsm_gallery_img_2.JPG", alt: "DS Monogram aquarium ornament, image 2" },
+  { src: "/images/projects/ds_monogram/dsm_gallery_img_3.JPG", alt: "DS Monogram aquarium ornament, image 3" },
+];
+---
+
+<BaseLayout title="DS Monogram — Aisling Strzoda" description="DS Monogram, a logo design project by Aisling Strzoda.">
+  <article class="project-page">
+    <header class="project-header">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h1>DS Monogram</h1>
+      </div>
+      <div class="project-description">
+        <p>This monogram was designed for my dad’s birthday to celebrate playful personality and his passions for fishing and aquarium keeping.</p>
+        <p>The letter “D” is stylized as a fish, while the “S” is a hook, representing the moment of a catch.</p>
+        <p>This design was made as an aquarium ornament, using orange refractive Perspex for the fish and clear acrylic for the hook.</p>
+        <p>To bring the concept to life, I staged a photo shoot of my dad fishing the ornament from the water and placing it into the tank. Which visually blends his two favorite hobbies into a single, joyful object.</p>
+      </div>
+    </header>
+
+    <div class="project-media" aria-label="DS Monogram project gallery">
+      {images.map((image, index) => (
+        <img class="project-media__image" src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+      ))}
+    </div>
+
+    <a class="back-link" href="/gallery">← Back to gallery</a>
+  </article>
+</BaseLayout>
