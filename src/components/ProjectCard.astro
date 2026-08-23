@@ -1,14 +1,24 @@
 ---
-const { title, detail, href, shape = "landscape" } = Astro.props;
+const { title, detail, href, shape = "landscape", image, imageAlt = "" } = Astro.props;
 ---
 
 <article class="project-card">
   <a href={href}>
-    <div class:list={["media-placeholder", `media-placeholder--${shape}`]} aria-hidden="true"></div>
+    {
+      image ? (
+        <img
+          class:list={["project-card__image", `media-placeholder--${shape}`]}
+          src={image}
+          alt={imageAlt}
+          loading="lazy"
+        />
+      ) : (
+        <div class:list={["media-placeholder", `media-placeholder--${shape}`]} aria-hidden="true"></div>
+      )
+    }
     <div class="project-card__text">
       <h2>{title}</h2>
       {detail && <p>{detail}</p>}
     </div>
   </a>
 </article>
-

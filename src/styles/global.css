@@ -1,7 +1,10 @@
+@import url("../styles/clash-display.css");
+@import url("../styles/archivo.css");
+
 :root {
   color: #171717;
   background: #f7f7f5;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Archivo-Regular;
   font-synthesis: none;
 }
 
@@ -97,9 +100,16 @@ main {
   max-width: 10ch;
   margin-bottom: 1rem;
   font-size: clamp(4rem, 13vw, 12rem);
-  font-weight: 400;
+  font-family: ClashDisplay-Variable;
+  font-weight: 450;
   letter-spacing: -0.065em;
   line-height: 0.82;
+
+  transition: font-weight .5s;
+}
+
+.home-intro h1:hover {
+  font-weight: 500;
 }
 
 .home-role {
@@ -122,7 +132,8 @@ main {
 .project-header h1 {
   margin-bottom: 0;
   font-size: clamp(2.5rem, 6vw, 5.5rem);
-  font-weight: 400;
+  font-weight: 450;
+  font-family: ClashDisplay-Variable;
   letter-spacing: -0.045em;
   line-height: 1;
 }
@@ -146,6 +157,12 @@ main {
 .project-card > a:hover h2 {
   text-decoration: underline;
   text-underline-offset: 0.2em;
+}
+
+.project-card__image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 .project-card__text {
@@ -250,6 +267,12 @@ main {
   display: grid;
   gap: 1.5rem;
   margin-bottom: 3rem;
+}
+
+.project-media__image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .media-pair {
