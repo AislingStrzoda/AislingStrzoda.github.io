@@ -6,7 +6,7 @@ const titleLines = ["Aisling", "Strzoda"];
 
 <BaseLayout>
   <section class="home-intro">
-    <div>
+    <div class="home-copy">
       <h1 aria-label={titleLines.join(" ")}>
         {titleLines.map((line, lineIndex) => (
           <>
@@ -17,10 +17,38 @@ const titleLines = ["Aisling", "Strzoda"];
           </>
         ))}
       </h1>
+      <p class="home-summary">
+        Graphic designer with a particular interest in editorial design, typography and branding.
+        My work is research-driven, playful and experimental, with a strong focus on the little details.
+      </p>
     </div>
-    <p class="home-summary">
-      Graphic designer with a particular interest in editorial design, typography and branding.
-      My work is research-driven, playful and experimental, with a strong focus on the little details.
-    </p>
+    <div class="home-work">
+      <div class="home-showcase" aria-hidden="true">
+        <img
+          class="home-showcase__image home-showcase__image--bottom-left"
+          src="/images/projects/full_car.jpeg"
+          alt=""
+          decoding="async"
+        />
+        <img
+          class="home-showcase__image home-showcase__image--top-middle"
+          src="/images/projects/full_car.jpeg"
+          alt=""
+          decoding="async"
+        />
+        <img
+          class="home-showcase__image home-showcase__image--bottom-right"
+          src="/images/projects/full_car.jpeg"
+          alt=""
+          decoding="async"
+        />
+      </div>
+      <a class="home-work-link" href="/gallery" aria-label="Work">
+        <span class="home-work-word" aria-hidden="true">
+          {Array.from("Work").map((letter) => <span class="title-letter">{letter}</span>)}
+        </span>
+        <span class="title-letter home-work-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
   </section>
 </BaseLayout>

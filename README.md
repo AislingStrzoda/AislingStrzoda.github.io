@@ -10,12 +10,12 @@ Aisling Strzoda's graphic design portfolio website.
 ## Upcoming Features
 
 - [X] Change body font to *Satoshi*
-- [ ] Nav-bar fonts should be same as titles
+- [X] Nav-bar fonts should be same as titles
 
 ### Landing Page
 
-- [ ] Add big "Work" text w/ arrow on landing page (bottom right)
-- [ ] Add appearing/dissappearing images to landing page of select work
+- [X] Add big "Work" text w/ arrow on landing page (bottom right)
+- [X] Add appearing/dissappearing images to landing page of select work
     (*top left, bottom middle, top right*)
 
 ### Gallery

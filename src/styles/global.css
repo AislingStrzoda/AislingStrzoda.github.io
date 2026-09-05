@@ -61,6 +61,7 @@ p {
 
 .site-name {
   font-weight: 600;
+  font-family: ClashDisplay-Medium;
   text-decoration: none;
 }
 
@@ -71,6 +72,7 @@ p {
   margin-left: auto;
   padding: 0;
   list-style: none;
+  font-family: ClashDisplay-Regular;
 }
 
 .nav-links a {
@@ -89,18 +91,24 @@ main {
 }
 
 .home-intro {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: calc(100vh - 9rem);
+  gap: clamp(3rem, 6vw, 8rem);
+  padding: 4.5rem 3.5rem;
+}
+
+.home-copy,
+.home-work {
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 4rem;
-  padding: 2rem 0;
 }
 
 .home-intro h1 {
   max-width: 10ch;
   margin-bottom: 1rem;
-  font-size: clamp(4rem, 13vw, 12rem);
+  font-size: clamp(4rem, 11vw, 12rem);
   font-family: ClashDisplay-Variable;
   font-weight: 450;
   letter-spacing: -0.065em;
@@ -126,14 +134,94 @@ main {
   }
 }
 
-.home-role {
-  font-size: clamp(1.25rem, 2vw, 2rem);
-}
-
 .home-summary {
   max-width: 34rem;
   margin-bottom: 0;
   font-size: 1.125rem;
+}
+
+.home-work {
+  align-items: flex-end;
+}
+
+.home-showcase {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.25vw, 1.25rem);
+}
+
+.home-showcase__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  opacity: 0;
+  animation: home-showcase-fade 12s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+
+.home-showcase__image--bottom-left {
+  grid-area: 2 / 1;
+}
+
+.home-showcase__image--top-middle {
+  grid-area: 1 / 2;
+  animation-delay: 4s;
+}
+
+.home-showcase__image--bottom-right {
+  grid-area: 2 / 3;
+  animation-delay: 8s;
+}
+
+@keyframes home-showcase-fade {
+  0% {
+    opacity: 0;
+  }
+
+  11.111% {
+    opacity: 1;
+  }
+
+  22.222% {
+    opacity: 1;
+  }
+
+  33.333%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.home-work-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.00em;
+  font-family: ClashDisplay-Variable;
+  font-size: clamp(4rem, 11vw, 12rem);
+  font-weight: 450;
+  letter-spacing: -0.065em;
+  line-height: 0.82;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.home-work-word {
+  display: inline-flex;
+}
+
+.home-work-arrow {
+  display: inline-block;
+  width: 0.65em;
+  flex: none;
+  transform: scaleX(0.8);
+  transform-origin: left center;
+}
+
+.home-work-link:hover,
+.home-work-link:active {
+  text-decoration: none;
 }
 
 .page-heading {
@@ -308,6 +396,14 @@ main {
 }
 
 @media (max-width: 56rem) {
+  .home-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .home-copy {
+    gap: 4rem;
+  }
+
   .project-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
