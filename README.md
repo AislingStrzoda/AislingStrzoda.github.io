@@ -17,16 +17,19 @@ Aisling Strzoda's graphic design portfolio website.
 - [X] Add big "Work" text w/ arrow on landing page (bottom right)
 - [X] Add appearing/dissappearing images to landing page of select work
     (*top left, bottom middle, top right*)
+- [X] Fix padding
 
 ### Gallery
 
-- [ ] Centre align "*Gallery*" title
-- [ ] Fix masonry grid gallery
+- [X] Centre align "*Gallery*" title
+- [X] Fix masonry grid gallery
+- [X] Fix padding
 
 ### Project Pages
 
-- [ ] Centre align title
-- [ ] Move blurb underneath title, blurb on right half and project type & on left
+- [X] Centre align title
+- [X] Move blurb underneath title, blurb on right half and project type & on left
 - [ ] Project images should be staggered alternating left-right alignment, about 70% sw
 - [ ] *Portrait image treatment to be revisited...*
 - [ ] "*Back to Gallery*" button to be title-font and much larger, same size as project title, no underline
+- [ ] Update images and blurbs based on provided zip

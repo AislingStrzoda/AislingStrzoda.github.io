@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectHeader from "../../components/ProjectHeader.astro";
 
 const images = [
   { src: "/images/projects/full_car.jpeg", alt: "Full Formula Trinity race car livery design" },
@@ -11,16 +12,10 @@ const images = [
 
 <BaseLayout title="Formula Trinity — Aisling Strzoda" description="Formula Trinity race car livery and visual identity by Aisling Strzoda.">
   <article class="project-page">
-    <header class="project-header">
-      <div>
-        <p class="eyebrow">Selected work</p>
-        <h1>Formula Trinity</h1>
-      </div>
-      <div class="project-description">
+    <ProjectHeader title="Formula Trinity" projectType="Race Car Livery" year="2026">
         <p>Formula Trinity is Trinity College Dublin’s Formula Student team, which designs and builds a race car to compete at Silverstone.</p>
         <p>I developed the visual identity of the car through its livery, sponsor graphics and hand-painted details, as well as designing merchandise for the team. The project involved translating an existing brand into a bold visual system that worked across both the car and apparel.</p>
-      </div>
-    </header>
+    </ProjectHeader>
 
     <div class="project-media" aria-label="Formula Trinity project gallery">
       {images.map((image, index) => (

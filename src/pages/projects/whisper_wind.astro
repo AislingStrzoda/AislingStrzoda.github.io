@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectHeader from "../../components/ProjectHeader.astro";
 
 const images = [
   { src: "/images/projects/whisper_wind/ww_hero_img.JPG", alt: "Whispers of the Wind exhibition installation" },
@@ -17,18 +18,12 @@ const images = [
   description="Whispers of the Wind, a public exhibition project by Aisling Strzoda."
 >
   <article class="project-page">
-    <header class="project-header">
-      <div>
-        <p class="eyebrow">Selected work</p>
-        <h1>Whispers of the Wind</h1>
-      </div>
-      <div class="project-description">
+    <ProjectHeader title="Whispers of the Wind" projectType="Public Exhibition" year="2025">
         <p>Whispers of the Wind is a project, part of a public exhibition <em>Disruptive Tendencies</em>, responding to “<em>It’s Freezing in LA!</em>” climate magazine, exploring how a single storm fractures into many personal truths across Ireland. As storms grow stronger and more unpredictable, the project examines the space between meteorological data and lived experience.</p>
         <p>This exhibition was created in collaboration with Bulcsú Plette, Mario Onofrei, Hollie Gordon and Kathleen O’Kelly.</p>
         <p>At the centre of the installation is an embroidered storm chart, where red, orange, and yellow threads trace weather-warning paths along stitched isobars. Visitors draw a tarot-inspired card and follow its colour-coded path, encountering fragments of narrative shaped by myth, memory, and misinformation. A looping mandala-style animation and accompanying booklet further unravel how information bends as it moves through place and people.</p>
         <p>Rather than offering certainty, the project lingers in ambiguity, quietly disrupting how climate data is consumed and understood.</p>
-      </div>
-    </header>
+    </ProjectHeader>
 
     <div class="project-media" aria-label="Whispers of the Wind project gallery">
       {images.map((image, index) => (

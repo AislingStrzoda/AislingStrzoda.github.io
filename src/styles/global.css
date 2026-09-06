@@ -227,28 +227,28 @@ main {
 .page-heading {
   margin-bottom: 3rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #d8d8d4;
 }
 
 .page-heading h1,
 .project-header h1 {
   margin-bottom: 0;
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
   font-weight: 450;
   font-family: ClashDisplay-Variable;
   letter-spacing: -0.045em;
-  line-height: 1;
+  text-align: center;
 }
 
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  align-items: start;
-  gap: 1.5rem;
+  column-count: 3;
+  column-gap: 2rem;
+  padding: 0rem 3rem;
 }
 
 .project-card {
   width: 100%;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
 }
 
 .project-card > a {
@@ -343,13 +343,28 @@ main {
 }
 
 .project-header {
-  display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);
-  gap: 3rem;
   margin-bottom: 5rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #d8d8d4;
 }
+
+.project-header h1 {
+  margin-bottom: clamp(3rem, 7vw, 7rem);
+}
+
+.project-header__details {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: clamp(3rem, 6vw, 8rem);
+}
+
+.project-meta p,
+.project-meta time {
+  display: block;
+  margin: 0;
+  padding-left: 3rem;
+}
+
 
 .eyebrow {
   margin-bottom: 0.75rem;
@@ -360,8 +375,9 @@ main {
 }
 
 .project-description {
-  max-width: 30rem;
+  max-width: 41rem;
   margin-top: auto;
+  padding-right: 3rem;
 }
 
 .project-description p {
@@ -382,6 +398,20 @@ main {
   display: block;
   width: 100%;
   height: auto;
+}
+
+@media (min-width: 56.0625rem) {
+  .project-media__image {
+    width: calc(100% - clamp(3rem, 8vw, 10rem));
+  }
+
+  .project-media__image:nth-child(odd) {
+    justify-self: start;
+  }
+
+  .project-media__image:nth-child(even) {
+    justify-self: end;
+  }
 }
 
 .media-pair {
@@ -405,12 +435,22 @@ main {
   }
 
   .project-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-count: 2;
+    padding: 0rem 1rem;
   }
 
-  .project-header {
+  .project-header__details {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
+  }
+
+  .project-meta p,
+  .project-meta time {
+    padding-left: 0;
+  }
+
+  .project-description {
+    padding-right: 0;
   }
 }
 
@@ -434,7 +474,18 @@ main {
   }
 
   .project-gallery {
-    grid-template-columns: 1fr;
+    column-count: 1;
+    padding: 0rem 0.5rem;
+  }
+
+  .project-media {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .project-description {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .info-grid,

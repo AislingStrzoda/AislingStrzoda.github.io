@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectHeader from "../../components/ProjectHeader.astro";
 
 const images = [
   { src: "/images/projects/receipt_recipes/rr_hero_img.jpg", alt: "Receipt Recipes cookbook and cocktail book" },
@@ -16,12 +17,7 @@ const images = [
 
 <BaseLayout title="Receipt Recipes — Aisling Strzoda" description="Receipt Recipes, a cookbook project by Aisling Strzoda.">
   <article class="project-page">
-    <header class="project-header">
-      <div>
-        <p class="eyebrow">Selected work</p>
-        <h1>Receipt Recipes</h1>
-      </div>
-      <div class="project-description">
+    <ProjectHeader title="Receipt Recipes" projectType="Book Design" year="2024">
         <p>Receipt recipes is a cookbook inspired by the receipts within Peter Haining’s Ephemera archive from box 6, 2005.</p>
         <p>Each shopping receipt reveals unlikely pairings such as mackerel and orange juice or peppers and chocolate, just to name a few. We’ve turned these strange combinations into budget-friendly recipes that students can enjoy.</p>
         <p>This cookbook was created in collaboration with Aisling Mullaney and Conor Toomey</p>
@@ -30,8 +26,7 @@ const images = [
         <p>The project’s impact relied on its visuals. We took inspiration from food photography of the era the recipes came from, as well as Martin Parr’s distinct style. Shot in various locations, the photos were styled to reflect a casual, ‘on-the-go’ student lifestyle, connecting back to Peter Haining’s experience in that era.</p>
         <p>It was shortlisted and featured in a symposium held in April at the Harry Clarke Lecture Theatre, and was later displayed to the public in the NCAD foyer that same month.</p>
         <p>We created a complementary cocktail book to truly have a student menu. The layout remained minimal as we placed illustrations, photography, commentary and receipts alongside it. The photography remained unconventional.</p>
-      </div>
-    </header>
+    </ProjectHeader>
 
     <div class="project-media" aria-label="Receipt Recipes project gallery">
       {images.map((image, index) => (

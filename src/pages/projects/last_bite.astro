@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectHeader from "../../components/ProjectHeader.astro";
 
 const images = [
   { src: "/images/projects/last_bite/lb_hero_image.png", alt: "The Last Bite book cover" },
@@ -13,20 +14,14 @@ const images = [
 
 <BaseLayout title="The Last Bite — Aisling Strzoda" description="The Last Bite, a book design project by Aisling Strzoda.">
   <article class="project-page">
-    <header class="project-header">
-      <div>
-        <p class="eyebrow">Selected work</p>
-        <h1>The Last Bite</h1>
-      </div>
-      <div class="project-description">
+    <ProjectHeader title="The Last Bite" projectType="Book Design" year="2025">
         <p>This project stems from a peculiar ritual I have: regardless of portion size, I always leave a last bite on my plate. This inspired me to make a book exploring this phenomenon across cultures, weighing its benefits and drawbacks.</p>
-        <p>I designed the text as an edible language: sentences are bites, full stops are brief pauses, and large paragraph gaps are deep breaths.</p>
-        <p>Custom glyphs are derived from silhouettes of my own leftover pieces. By pairing red, which stimulates appetite, with blue, which suppresses it, the colour palette reinforces the theme.</p>
-        <p>As the book progresses, the layout gradually opens up, revealing more negative space as if the words themselves were being eaten away.</p>
-        <p>Each chapter has its own visual language: the meal-planning section is neatly divided into clear, bite-sized blocks, while the global-impact pages spill into chaotic, disordered spreads.</p>
-        <p>The book opens and closes with tinfoil pages, like wrapped-up leftovers, framing the experience.</p>
-      </div>
-    </header>
+        <p>I designed the text as an edible language: sentences are bites, full stops are brief pauses, and large paragraph gaps are deep breaths. 
+          Custom glyphs are derived from silhouettes of my own leftover pieces. By pairing red, which stimulates appetite, with blue, which suppresses it, the colour palette reinforces the theme.</p>
+        <p>As the book progresses, the layout gradually opens up, revealing more negative space as if the words themselves were being eaten away.
+          Each chapter has its own visual language: the meal-planning section is neatly divided into clear, bite-sized blocks, while the global-impact pages spill into chaotic, disordered spreads.
+          The book opens and closes with tinfoil pages, like wrapped-up leftovers, framing the experience.</p>
+    </ProjectHeader>
 
     <div class="project-media" aria-label="The Last Bite project gallery">
       {images.map((image, index) => (

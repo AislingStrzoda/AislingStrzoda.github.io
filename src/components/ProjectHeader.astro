@@ -1,0 +1,16 @@
+---
+const { title, projectType, year } = Astro.props;
+---
+
+<header class="project-header">
+  <h1>{title}</h1>
+  <div class="project-header__details">
+    <div class="project-meta" aria-label="Project details">
+      <p>{projectType}</p>
+      <time datetime={year}>{year}</time>
+    </div>
+    <div class="project-description">
+      <slot />
+    </div>
+  </div>
+</header>
