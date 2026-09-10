@@ -29,7 +29,7 @@ Aisling Strzoda's graphic design portfolio website.
 
 - [X] Centre align title
 - [X] Move blurb underneath title, blurb on right half and project type & on left
-- [ ] Project images should be staggered alternating left-right alignment, about 70% sw
+- [X] Project images should be staggered alternating left-right alignment, about 70% sw
 - [ ] *Portrait image treatment to be revisited...*
 - [ ] "*Back to Gallery*" button to be title-font and much larger, same size as project title, no underline
 - [ ] Update images and blurbs based on provided zip
